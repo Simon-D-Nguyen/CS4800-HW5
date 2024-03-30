@@ -1,8 +1,18 @@
 public class HotDog extends FoodItem {
 
     public HotDog(){
-        super();
-        setFoodName("Hot Dog");
-        setItemPrice(1.50);
+        super("Hot Dog", 1.50);
+    }
+
+
+    @Override
+    public void setFoodName(String foodName) {
+
+    }
+
+
+    @Override
+    public void setItemPrice(double itemPrice) {
+
     }
 }

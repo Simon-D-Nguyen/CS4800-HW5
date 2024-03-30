@@ -10,6 +10,11 @@ public abstract class FoodItem {
         this.itemPrice = 0.0;
     }
 
+    FoodItem(String foodName, double price){
+        this.foodName = foodName;
+        this.itemPrice = price;
+    }
+
 
     public void setFoodName(String foodName){
         this.foodName = foodName;

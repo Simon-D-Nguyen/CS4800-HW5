@@ -1,8 +1,18 @@
 public class Fries extends FoodItem{
 
     public Fries(){
-        super();
-        setFoodName("Fries");
-        setItemPrice(1.00);
+        super("Fries", 1.00);
+    }
+
+
+    @Override
+    public void setFoodName(String foodName) {
+
+    }
+
+
+    @Override
+    public void setItemPrice(double itemPrice) {
+
     }
 }
