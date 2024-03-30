@@ -12,7 +12,6 @@ public class HotDogTest {
     public void testGetFoodName(){
         // GIVEN
         String expected = "Hot Dog";
-        // "burger" is instantiated with tester
 
         // WHEN
         String actual = tester.getFoodName();

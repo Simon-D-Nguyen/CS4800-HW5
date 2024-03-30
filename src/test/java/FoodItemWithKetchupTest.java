@@ -3,15 +3,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
+public class FoodItemWithKetchupTest {
 
-public class FriesTest {
-
-    FoodItem tester = new Fries();
+    FoodItem tester = new FoodItemWithKetchup(new Burger());
 
     @Test
     public void testGetFoodName(){
         // GIVEN
-        String expected = "Fries";
+        String expected = "Burger + Ketchup";
 
         // WHEN
         String actual = tester.getFoodName();
@@ -38,7 +37,7 @@ public class FriesTest {
     @Test
     public void testGetItemPrice(){
         // GIVEN
-        double expected = 1.0;
+        double expected = 7.49;
 
         // WHEN
         double actual = tester.getItemPrice();
@@ -60,4 +59,5 @@ public class FriesTest {
         // THEN
         assertNotEquals(expected, actual);
     }
+
 }
