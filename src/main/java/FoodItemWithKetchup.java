@@ -6,7 +6,7 @@ public class FoodItemWithKetchup extends Topping {
 
     @Override
     public String getFoodName() {
-        return super.getFoodName() + " + Ketchup ";
+        return super.getFoodName() + " + Ketchup";
     }
 
     @Override

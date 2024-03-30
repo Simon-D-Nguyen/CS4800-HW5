@@ -7,7 +7,7 @@ public class FoodItemWithOnions extends Topping{
 
     @Override
     public String getFoodName() {
-        return super.getFoodName() + " + Onions ";
+        return super.getFoodName() + " + Onions";
     }
 
     @Override
