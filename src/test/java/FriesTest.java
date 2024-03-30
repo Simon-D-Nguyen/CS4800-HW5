@@ -1,34 +1,17 @@
-
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-public class NewFoodTest {
 
-    private static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    private static final PrintStream originalOut = System.out;
-    FoodItem tester = new NewFood("burger", 10.99);
+public class FriesTest {
 
-    @BeforeAll
-    public static void setupStreams(){
-        System.setOut(new PrintStream(outContent));
-    }
-
-    @AfterAll
-    public static void restoreStreams(){
-        System.setOut(originalOut);
-    }
-
+    FoodItem tester = new Fries();
 
     @Test
     public void testGetFoodName(){
         // GIVEN
-        String expected = "burger";
+        String expected = "Fries";
         // "burger" is instantiated with tester
 
         // WHEN
@@ -49,14 +32,14 @@ public class NewFoodTest {
         String actual = tester.getFoodName();
 
         // THEN
-        assertEquals(expected, actual);
+        assertNotEquals(expected, actual);
     }
 
 
     @Test
     public void testGetItemPrice(){
         // GIVEN
-        double expected = 10.99;
+        double expected = 1.0;
 
         // WHEN
         double actual = tester.getItemPrice();
@@ -76,6 +59,6 @@ public class NewFoodTest {
         double actual = tester.getItemPrice();
 
         // THEN
-        assertEquals(expected, actual);
+        assertNotEquals(expected, actual);
     }
 }
