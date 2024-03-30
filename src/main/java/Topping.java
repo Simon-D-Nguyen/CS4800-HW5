@@ -1,7 +1,16 @@
 public abstract class Topping extends FoodItem {
+    FoodItem foodItem;
     Topping(FoodItem foodItem) {
-        this.foodName = foodItem.getFoodName();
-        this.itemPrice = foodItem.getItemPrice();
-        this.toppings = foodItem.toppings;
+        this.foodItem = foodItem;
+    }
+
+    @Override
+    public String getFoodName() {
+        return foodItem.getFoodName();
+    }
+
+    @Override
+    public double getItemPrice() {
+        return foodItem.getItemPrice();
     }
 }
